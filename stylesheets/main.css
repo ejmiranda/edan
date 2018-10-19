@@ -1,0 +1,190 @@
+@font-face {
+  font-display: swap;
+  font-family: 'BlackHansSans-Regular';
+  src: url(fonts/BlackHanSans-Regular.ttf);
+}
+
+body,
+footer {
+  background-color: #111;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+.content {
+  background-color: #ffce12;
+}
+
+header {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo,
+.nav a {
+  color: #ffce12;
+}
+
+.logo {
+  font-family: 'BlackHansSans-Regular', Arial, Helvetica, sans-serif;
+}
+
+header .logo {
+  font-size: 4em;
+  margin: 5px 0;
+}
+
+.map .logo {
+  font-size: 1.5em;
+}
+
+.map .logo,
+.map h1 {
+  color: #ffce12;
+  padding-bottom: 20px;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a,
+.map a {
+  border: 1px solid #222;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 0.95em;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.map .contact,
+.map p {
+  color: white;
+}
+
+.map .contact {
+  border: 1px solid white;
+  margin: 20px 0;
+}
+
+.nav a:hover,
+.map .contact:hover {
+  background-color: #ffce12;
+  border: 1px solid #ffce12;
+  color: #111;
+}
+
+.map,
+footer {
+  position: absolute;
+  width: 100%;
+}
+
+.map {
+  background-color: #222;
+  bottom: 55px;
+}
+
+.map div {
+  float: left;
+  height: 200px;
+  margin: 20px;
+  padding: 5px;
+  width: 250px;
+}
+
+.map .section {
+  width: 170px;
+}
+
+.map h1 {
+  font-size: 0.9em;
+  font-weight: bolder;
+  padding: 10px 0 31px 0;
+}
+
+.map p {
+  line-height: 1.5em;
+}
+
+.content {
+  padding: 45px 0;
+}
+
+.display,
+.quote {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.display {
+  text-align: center;
+}
+
+.display img,
+.quote {
+  width: 700px;
+}
+
+.quote {
+  padding: 30px 30px 0 40px;
+}
+
+.display img {
+  display: inline-block;
+  height: 500px;
+}
+
+footer {
+  background-color: #111;
+  bottom: 0;
+  height: 55px;  
+}
+
+.pages {
+  text-align: center;
+}
+
+.page {
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(169,169,169,1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(169,169,169,1);
+  box-shadow: 0px 0px 10px 0px rgba(169,169,169,1);
+  color: #222;
+  display: inline-block;
+  font-weight: bold;
+  height: 200px;
+  margin: 0 10px;
+  padding: 10px;
+  position: relative;
+    bottom: 20px;
+  width: 325px;
+}
+
+.page img {
+  border: 1px solid lightgray;
+  height: 150px;
+  margin: 15px 0;
+  width: 300px;
+}
+
+.sections {
+  margin: 0 auto;
+}
+
+footer .copyright {
+  color: darkgrey;
+  font-size: 0.8em;
+  padding: 20px;
+}
