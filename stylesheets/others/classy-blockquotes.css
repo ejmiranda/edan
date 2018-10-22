@@ -120,7 +120,7 @@ h1 {
 }
 
 .testimonial-quote blockquote p {
-    color: #222;
+    color: #13171a;
     margin-bottom: 20px;
 }
 
@@ -129,11 +129,11 @@ h1 {
 }
 
 .testimonial-quote cite {
-    color: #222;
+    color: #13171a;
     line-height: 1.1em; 
 }
   
 .testimonial-quote cite span {
-    color: #111;
+    color: #13171a;
     text-shadow: none;
 }

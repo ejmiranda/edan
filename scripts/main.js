@@ -1,3 +1,3 @@
-const year = document.querySelector(`.year`);
+// const year = document.querySelector(`.year`);
 
-year.textContent = new Date().getFullYear();
+// year.textContent = new Date().getFullYear();
