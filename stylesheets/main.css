@@ -73,6 +73,33 @@ a {
   background-image: radial-gradient(#fed581, #ffb501);
   border-bottom: 50px solid #47515a;
   padding: 25px 0;
+  text-align: center;
+}
+
+.previous,
+.slide,
+.quote,
+.photo,
+.next {
+  display: inline-block;
+}
+
+.previous,
+.next {
+  background-color: inherit;
+  color: #47515a;
+  font-size: 2em;
+  height: 60px;
+  margin: 0 10px;
+  outline: none;
+  transition: background-color 0.5s;
+  width: 60px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(19,23,26, 0.15);
+  cursor: pointer;
 }
 
 .slide {
@@ -84,7 +111,6 @@ a {
 
 .quote,
 .photo {
-  display: inline-block;
   margin: 0 5px;
   vertical-align: middle;
 }
