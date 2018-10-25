@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -70,6 +70,7 @@ header {
   font-size: 0.9em;
   font-weight: bolder;
   height: 73px;
+  margin: 0 7px;
   padding: 30px 0 0 0;
   text-align: center;
   transition: background-color 0.4s;
@@ -86,6 +87,10 @@ a {
   text-decoration: none;
 }
 
+.content {
+  background-color: whitesmoke;
+}
+
 .home {
   height: 1781px;
 }
@@ -98,7 +103,7 @@ a {
 .slideshow {
   background-image: radial-gradient(#fed581, #ffb501);
   border-bottom: 50px solid #47515a;
-  padding: 25px 0 150px 0;
+  padding: 10px 0 150px 0;
 }
 
 .nav-item,
