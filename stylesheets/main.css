@@ -26,7 +26,8 @@ body {
 .nav-item,
 .serv-header,
 .legend,
-.contact{
+.contact,
+.page-header {
   font-family: 'Oswald-Regular';
   letter-spacing: 1px;
 }
@@ -70,6 +71,10 @@ body {
   font-size: 0.9em;
 }
 
+.page-header {
+  font-size: 3em;
+}
+
 /**********************************************/
 /* Background Color/Image Border & Text Color */
 /**********************************************/
@@ -102,7 +107,8 @@ header {
 
 .nav-item:hover,
 .legend,
-.contact:hover {
+.contact:hover,
+.page-header {
   color: #13171a;
 }
 
@@ -175,6 +181,10 @@ header {
   background-color: black;
 }
 
+.page-header {
+  border-bottom: 3px solid #ffb501;
+}
+
 /************************/
 /* Display & Text Align */
 /************************/
@@ -191,6 +201,10 @@ header {
 .section,
 .contact {
   display: inline-block;
+}
+
+.page-header {
+  display: block;
 }
 
 .header-stage,
@@ -234,6 +248,10 @@ header {
 
 a {
   text-decoration: none;
+}
+
+.content {
+  overflow: hidden;
 }
 
 .home {
@@ -378,4 +396,19 @@ a {
 
 .credits:hover {
   text-decoration: underline;
+}
+
+.page-header {
+  margin: 25px 0;
+  padding-bottom: 10px;
+}
+
+.small-icon {
+  height: 64px;
+  margin-right: 20px;
+  width: 64px;
+}
+
+.attributions {
+  margin: 15px 0 40px 0;
 }
