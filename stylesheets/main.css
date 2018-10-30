@@ -133,6 +133,7 @@ header {
   transition: background-color 0.3s;
 }
 
+.selected,
 .dot:hover {
   background-color: rgba(71, 81, 90, 1); /* #47515a */
 }
@@ -193,7 +194,6 @@ header {
 .nav,
 .nav-item,
 .previous,
-.slide,
 .quote,
 .photo,
 .next,
@@ -278,8 +278,13 @@ a {
 }
 
 .slide {
+  display: none;
   margin: 0 auto;
   padding: 25px 0;
+}
+
+.active {
+  display: inline-block;
 }
 
 .quote,
@@ -320,6 +325,7 @@ a {
   -webkit-border-radius: 50%;
   height: 13px;
   margin: 0 1px;
+  outline: none;
   width: 13px;
 }
 
