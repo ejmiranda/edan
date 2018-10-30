@@ -79,7 +79,8 @@ body {
 }
 
 header {
-  background-image: linear-gradient(#13171a, #47515a);
+  /* background-image: linear-gradient(#13171a, #47515a); */
+  background-color: #47515a;
 }
 
 .header-stage {
@@ -216,7 +217,7 @@ header {
   box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .container {
@@ -236,7 +237,7 @@ header {
 }
 
 .nav-item {
-  height: 73px;
+  height: 75px;
   margin: 0 10px;
   padding: 30px 0 0 0;
   width: 85px;
