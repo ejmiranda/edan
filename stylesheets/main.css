@@ -1,7 +1,20 @@
+/********************************/
+/* Font Family & Letter Spacing */
+/********************************/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'BlackHansSans-Regular';
   src: url(fonts/BlackHanSans-Regular.ttf);
+}
+
+.logo,
+.footer-logo {
+  font-family: 'BlackHansSans-Regular';
 }
 
 @font-face {
@@ -10,102 +23,167 @@
   src: url(fonts/Oswald-Regular.ttf);
 }
 
-body {
-  background-color: black;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-  background-image: linear-gradient(#13171a, #47515a);
-  box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
-  padding: 10px 0;
-  
-}
-
-.header-stage {
-  border-top: 1px solid rgba(232,232,232, 0.15);
-  border-bottom: 1px solid rgba(232,232,232, 0.15);
-  padding: 15px 0 8px 0;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 10px;
-  position: relative;
-  width: 960px;
-}
-
-.nav {
-  position: absolute;
-    top: -16px;
-    right: 10px;
-}
-
-.logo,
 .nav-item,
-.footer-logo,
-.section h1 {
-  color: #ffb501;
-}
-
-.logo,
-.footer-logo {
-  font-family: 'BlackHansSans-Regular';
-}
-
-.logo {
-  font-size: 3em;
-}
-
-.nav-item,
+.serv-header,
 .legend,
 .contact{
   font-family: 'Oswald-Regular';
   letter-spacing: 1px;
 }
 
+/***************************/
+/* Font Size & Font Weight */
+/***************************/
+
+.logo {
+  font-size: 4em;
+}
+
 .nav-item {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: bolder;
-  height: 73px;
-  margin: 0 7px;
-  padding: 30px 0 0 0;
-  text-align: center;
+}
+
+.previous,
+.next {
+  font-size: 2em;
+}
+
+.serv-header  {
+  font-size: 1.5em;
+}
+
+.legend {
+  font-size: 1.25em;
+}
+
+.footer-logo {
+  font-size: 2em;
+}
+
+.contact {
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 0.9em;
+}
+
+/**********************************************/
+/* Background Color/Image Border & Text Color */
+/**********************************************/
+
+body {
+  background-color: black;
+}
+
+header {
+  background-image: linear-gradient(#13171a, #47515a);
+}
+
+.header-stage {
+  border-top: 1px solid rgba(232,232,232, 0.15); /* #e8e8e8 */
+  border-bottom: 1px solid rgba(232,232,232, 0.15); /* #e8e8e8 */
+}
+
+.logo,
+.nav-item,
+.footer-logo {
+  color: #ffb501;
+}
+
+.nav-item {
+  background-color: inherit;
   transition: background-color 0.4s;
-  width: 75px;
 }
 
 .nav-item:hover,
 .contact:hover {
   background-color: #ffb501;
-  color: #13171a;
 }
 
-a {
-  text-decoration: none;
+.nav-item:hover,
+.contact:hover,
+.legend {
+  color: #13171a;
 }
 
 .content {
   background-color: whitesmoke;
 }
 
-.home {
-  height: 1781px;
-}
-
-.slideshow,
-.services {
-  text-align: center;
-}
-
 .slideshow {
   background-image: radial-gradient(#fed581, #ffb501);
   border-bottom: 50px solid #47515a;
-  padding: 10px 0 150px 0;
 }
 
+.previous,
+.next {
+  background-color: inherit;
+  color: #47515a;
+}
+
+.dot {
+  border: 1px solid rgba(71, 81, 90, 0.25); /* #47515a */
+  background-color: rgba(71, 81, 90, 0.15); /* #47515a */
+  transition: background-color 0.3s;
+}
+
+.dot:hover {
+  background-color: rgba(71, 81, 90, 1); /* #47515a */
+}
+
+.services {
+  background-color: rgba(71, 81, 90, 0.55); /* #47515a */
+}
+
+.serv-header,
+.section p:not(.footer-logo),
+.contact,
+.credits:hover  {
+  color: white;
+}
+
+.serv-header  {
+  border-bottom: 3px solid white;
+}
+
+.service {
+  background-color: white;
+}
+
+.img-stage {
+  background-color: #fed581;
+}
+
+.map {
+  background-color: #13171a;
+}
+
+.contact {
+  border: 2px solid white;
+}
+
+.contact:hover {
+  border-color: #ffb501;
+}
+
+.copyright,
+.credits {
+  color: darkgray;
+}
+
+.copyright {
+  background-color: black;
+}
+
+/************************/
+/* Display & Text Align */
+/************************/
+
+.logo,
+.nav,
 .nav-item,
 .previous,
 .slide,
@@ -118,11 +196,66 @@ a {
   display: inline-block;
 }
 
+.header-stage,
+.slideshow,
+.services {
+  text-align: center;
+}
+
+.quote,
+.serv-header,
+.legend {
+  text-align: left;
+}
+
+/**********/
+/* Others */
+/**********/
+
+header {
+  box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0 0 1px 0px rgba(0,0,0,0.75);
+  padding: 10px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  width: 960px;
+}
+
+.logo,
+.nav {
+  vertical-align: middle;
+}
+
+.logo {
+  margin: 10px 75px 0 75px;
+}
+
+.nav-item {
+  height: 73px;
+  margin: 0 10px;
+  padding: 30px 0 0 0;
+  width: 85px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home {
+  height: 1820px;
+}
+
+.slideshow {
+  padding: 10px 0 150px 0;
+}
+
 .previous,
 .next {
-  background-color: inherit;
-  color: #47515a;
-  font-size: 2em;
   height: 50px;
   outline: none;
   transition: transform 0.4s;
@@ -150,7 +283,6 @@ a {
 .quote {
   height: 125px;
   padding-left: 5px;
-  text-align: left;
   width: 370px;
 }
 
@@ -167,24 +299,19 @@ a {
 }
 
 .dot {
-  border: 1px solid rgba(71, 81, 90, 0.25);
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  background-color: rgba(71, 81, 90, 0.15); 
   height: 13px;
   margin: 0 1px;
-  transition: background-color 0.3s;
   width: 13px;
 }
 
 .dot:hover {
-  background-color: rgba(71, 81, 90, 1); 
   cursor: pointer;
 }
 
 .services {
-  background-color: rgba(71, 81, 90, 0.55);
   margin: 0 auto 25px auto;
   padding: 10px 0;
   position: relative;
@@ -192,15 +319,18 @@ a {
   width: 900px;
 }
 
+.serv-header  {
+  margin: 5px 16px;
+  padding: 0 0 10px 0;
+}
+
 .service {
-  background-color: white;
   height: 245px;
   margin: 5px;
   width: 280px;
 }
 
 .img-stage {
-  background-color: #fed581;
   height: 200px;
   position: relative;
 }
@@ -217,61 +347,31 @@ a {
 }
 
 .legend {
-  color: #13171a;
-  font-size: 16px;
   height: 45px;
   line-height: 25px;
   padding: 10px;
-  text-align: left;
 }
 
 .map {
-  background-color: #13171a;
   padding: 25px 0;
 }
 
-.section {
-  text-align: left;
-}
-
 .footer-logo {
-  font-size: 2em;
   margin-bottom: 20px;
 }
 
-.section p:not(.footer-logo),
 .contact {
-  color: white;
-}
-
-.contact {
-  border: 2px solid white;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  color: white;
-  font-size: 0.95em;
-  font-weight: bold;
   margin-top: 25px;
   padding: 10px;
 }
 
-.contact:hover {
-  border-color: #ffb501;
-}
-
-.copyright,
-.credits {
-  color: darkgray;
-}
-
 .copyright {
-  background-color: black;
-  font-size: 0.9em;
   padding: 20px;
 }
 
 .credits:hover {
-  color: white;
   text-decoration: underline;
 }
