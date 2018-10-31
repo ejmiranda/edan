@@ -27,7 +27,7 @@ body {
 .services h1,
 .legend,
 .contact,
-.content .container h1 {
+.page-header {
   font-family: 'Oswald-Regular';
   letter-spacing: 1px;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 .services h1,
-.content .container h1  {
+.page-header  {
   font-size: 2em;
 }
 
@@ -72,7 +72,7 @@ body {
   font-size: 0.9em;
 }
 
-.content .container p {
+.page-text {
   font-size: 1.15em;
   line-height: 1.5em;
 }
@@ -111,8 +111,8 @@ header {
 .services h1,
 .legend,
 .contact:hover,
-.content .container h1,
-.content .container p {
+.page-header,
+.page-text {
   color: #13171a;
 }
 
@@ -145,7 +145,7 @@ header {
 }
 
 .services h1,
-.content .container h1 {
+.page-header {
   border-bottom: 3px solid #fed581;
 }
 
@@ -197,7 +197,7 @@ header {
   display: inline-block;
 }
 
-.content .container h1 {
+.page-header {
   display: block;
 }
 
@@ -251,7 +251,6 @@ body {
 }
 
 .main {
-  height: 100%;
   min-height: 100%;
   position: relative;
 }
@@ -259,7 +258,6 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  position: relative;
   width: 960px;
 }
 
@@ -358,8 +356,12 @@ a {
   cursor: pointer;
 }
 
+.content {
+  padding-bottom: 250px;
+}
+
 .services {
-  margin: 30px auto;
+  margin: 0 auto;
   width: 900px;
 }
 
@@ -398,8 +400,8 @@ a {
 
 .legend {
   height: 45px;
-  line-height: 25px;
-  padding: 10px;
+  line-height: 2.1em;
+  padding-left: 10px;
 }
 
 .map {
@@ -423,12 +425,12 @@ a {
   text-decoration: underline;
 }
 
-.content .container h1 {
+.page-header {
   margin: 25px 0;
   padding-bottom: 10px;
 }
 
-.content .container p {
+.page-text {
   margin: 20px 0;
 }
 
@@ -452,4 +454,9 @@ a {
     bottom: 0;
   width: 100%;
   height: 236px;
+}
+
+.service-section {
+  background-color: red;
+  margin-bottom: 5px;
 }
