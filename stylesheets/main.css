@@ -231,8 +231,20 @@ header {
   100%  {opacity:1;}
 }
 
+@-webkit-keyframes fading {
+  0%    {opacity:0;}
+  100%  {opacity:1;}
+}
+
+@-moz-keyframes fading {
+  0%    {opacity:0;}
+  100%  {opacity:1;}
+}
+
 .fading { 
   animation: fading 1.5s 1;
+  -webkit-animation: fading 1.5s 1;
+  -moz-animation: fading 1.5s 1;
 }
 
 /**********/
