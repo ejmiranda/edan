@@ -4,6 +4,7 @@ const nextBtn = document.querySelector(`.next`);
 const dots = document.querySelectorAll(`.dot`);
 
 let index = 0;
+let isAfterLoad = true;
 
 prevBtn.addEventListener(`click`, () => {
   index = (index > 0) ? --index : slides.length - 1;
@@ -23,6 +24,7 @@ for (let [dotIndex, dot] of dots.entries()) {
 }
 
 function showSlide(index) {
+  if (isAfterLoad) slides[0].classList.add(`fading`);
   slides.forEach((slide) => slide.classList.remove(`active`));
   dots.forEach((dot) => dot.classList.remove(`selected`));
   slides[index].classList.add(`active`);
