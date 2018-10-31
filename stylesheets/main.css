@@ -7,7 +7,7 @@ body {
 }
 
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'BlackHansSans-Regular';
   src: url(fonts/BlackHanSans-Regular.ttf);
 }
@@ -18,7 +18,7 @@ body {
 }
 
 @font-face {
-  font-display: swap;
+  font-display: block;
   font-family: 'Oswald-Regular';
   src: url(fonts/Oswald-Regular.ttf);
 }
@@ -41,8 +41,8 @@ body {
 }
 
 .nav-item {
-  font-size: 1.1em;
-  font-weight: bolder;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .previous,
@@ -149,7 +149,8 @@ header {
   border-bottom: 3px solid #fed581;
 }
 
-.service {
+.service,
+.small-icon {
   background-color: white;
   border: 1px solid rgba(71, 81, 90, 0.15); /* #47515a */
 }
@@ -431,10 +432,19 @@ a {
   margin: 20px 0;
 }
 
+.icons {
+  margin-top: 30px; 
+}
+
 .small-icon {
-  height: 64px;
+  height: 84px;
   margin-right: 20px;
-  width: 64px;
+  padding: 10px;
+  width: 84px;
+}
+
+.attributions {
+  margin: 10px 0;
 }
 
 .bottom {
