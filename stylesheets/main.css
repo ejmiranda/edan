@@ -72,7 +72,8 @@ body {
   font-size: 0.9em;
 }
 
-.page-text {
+.page-text,
+ul {
   font-size: 1.15em;
   line-height: 1.5em;
 }
@@ -456,7 +457,7 @@ a {
   height: 236px;
 }
 
-.service-section {
-  background-color: red;
-  margin-bottom: 5px;
+ul {
+  list-style-position: inside;
+  list-style-type: square;
 }
