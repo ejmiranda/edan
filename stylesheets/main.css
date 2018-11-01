@@ -57,6 +57,7 @@ body {
 
 .legend {
   font-size: 1.2em;
+  line-height: 2.1em;
 }
 
 .footer-logo {
@@ -73,6 +74,7 @@ body {
 }
 
 .page-text,
+.service-desc,
 ul {
   font-size: 1.15em;
   line-height: 1.5em;
@@ -151,7 +153,8 @@ header {
 }
 
 .service,
-.small-icon {
+.small-icon,
+.service-desc {
   background-color: white;
   border: 1px solid rgba(71, 81, 90, 0.15); /* #47515a */
 }
@@ -181,6 +184,10 @@ header {
   background-color: black;
 }
 
+.more {
+  color: blue;
+}
+
 /************************/
 /* Display & Text Align */
 /************************/
@@ -194,7 +201,8 @@ header {
 .next,
 .service,
 .section,
-.contact {
+.contact,
+.service-desc {
   display: inline-block;
 }
 
@@ -325,7 +333,8 @@ a {
 
 .photo,
 .service,
-.contact {
+.contact,
+.service-desc {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -371,9 +380,13 @@ a {
   padding: 0 0 10px 0;
 }
 
-.service {
+.service,
+.service-desc {
   height: 245px;
   margin: 5px;
+}
+
+.service {
   width: 280px;
 }
 
@@ -422,7 +435,8 @@ a {
   padding: 20px;
 }
 
-.credits:hover {
+.credits:hover,
+.more:hover {
   text-decoration: underline;
 }
 
@@ -455,6 +469,23 @@ a {
     bottom: 0;
   width: 100%;
   height: 236px;
+}
+
+.service-section {
+  margin-bottom: 5px;
+}
+
+.service-desc {
+  padding: 10px;
+  position: relative;
+  vertical-align: top;
+  width: 630px;
+}
+
+.more {
+  position: absolute;
+    bottom: 20px;
+    right: 30px;
 }
 
 ul {
