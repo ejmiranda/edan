@@ -80,6 +80,14 @@ footer .logo {
   font-size: 0.9em;
 }
 
+.project {
+  line-height: 1.5em;
+}
+
+.name {
+  font-size: 1.3em;
+}
+
 /******************/
 /* Text Transform */
 /******************/
@@ -206,7 +214,8 @@ header {
 .next,
 .service,
 .contact,
-.description {
+.description,
+.project-info {
   display: inline-block;
 }
 
@@ -328,9 +337,13 @@ button {
   display: inline-block;
 }
 
+.quote {
+  margin: 0 20px 0 10px;
+}
+
 .quote,
-.photo {
-  margin: 0 10px;
+.photo,
+.project-info {
   vertical-align: middle;
 }
 
@@ -349,11 +362,15 @@ button {
   -webkit-border-radius: 3px;
 }
 
+.photo,
+.project-info {
+  height: 350px;
+}
+
 .photo {
   box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
-  height: 350px;
   width: 415px;
 }
 
@@ -384,12 +401,16 @@ button {
 }
 
 .page-header  {
-  margin: 15px 0;
+  margin: 30px 0 15px 0;
   padding: 0 0 10px 0;
 }
 
-.content-text {
+.content-header {
   margin: 25px 0;
+}
+
+.content-text {
+  margin: 20px 0;
 }
 
 .service,
@@ -490,4 +511,27 @@ footer .logo {
   position: absolute;
     bottom: 15px;
     right: 15px;
+}
+
+.project {
+  padding: 15px 0;
+  margin: 20px 0;
+}
+
+.project-info {
+  padding: 0 10px;
+  width: 520px;
+}
+
+.name {
+  margin: 0 0 10px 0;
+}
+
+.place,
+.location {
+  margin: 5px 0;
+}
+
+.brief {
+  margin: 15px 0;
 }
