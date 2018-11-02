@@ -114,7 +114,14 @@ h1 {
 
 /*Additions*/
 
+@font-face {
+  font-display: block;
+  font-family: 'Oswald-Regular';
+  src: url(fonts/Oswald-Regular.ttf);
+}
+
 .testimonial-quote blockquote {
+    font-family: 'Oswald-Regular';
     font-size: 1.25em;
     text-shadow: none;
 }

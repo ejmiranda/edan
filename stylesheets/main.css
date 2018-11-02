@@ -2,19 +2,10 @@
 /* Font Family & Letter Spacing */
 /********************************/
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @font-face {
   font-display: block;
   font-family: 'BlackHansSans-Regular';
   src: url(fonts/BlackHanSans-Regular.ttf);
-}
-
-.logo,
-.footer-logo {
-  font-family: 'BlackHansSans-Regular';
 }
 
 @font-face {
@@ -23,13 +14,20 @@ body {
   src: url(fonts/Oswald-Regular.ttf);
 }
 
-.nav-item,
-.services h1,
-.legend,
-.contact,
-.page-header {
-  font-family: 'Oswald-Regular';
+body {
+  font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
+}
+
+.logo {
+  font-family: 'BlackHansSans-Regular';
+}
+
+.nav-item,
+.page-header,
+.contact {
+  font-family: 'Oswald-Regular';
+  letter-spacing: 3px;
 }
 
 /***************************************/
@@ -42,7 +40,7 @@ body {
 
 .nav-item {
   font-size: 1em;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .previous,
@@ -50,17 +48,25 @@ body {
   font-size: 2em;
 }
 
-.services h1,
-.page-header  {
+.page-header {
   font-size: 2em;
+}
+
+.content-header {
+  font-size: 1.5em;
+}
+
+.content-text {
+  font-size: 1.15em;
+  line-height: 1.5em;
 }
 
 .legend {
   font-size: 1.2em;
-  line-height: 2.1em;
+  line-height: 2.15em;
 }
 
-.footer-logo {
+footer .logo {
   font-size: 2em;
 }
 
@@ -73,11 +79,9 @@ body {
   font-size: 0.9em;
 }
 
-.page-text,
-.service-desc,
-ul {
-  font-size: 1.15em;
-  line-height: 1.5em;
+.description {
+  font-size: 1.1em;
+  line-height: 1.4em;
 }
 
 /**********************************************/
@@ -93,35 +97,31 @@ header {
 }
 
 .logo,
-.nav-item,
-.footer-logo {
+.nav-item {
   color: #ffc401;
 }
 
 .nav-item {
-  background-color: inherit;
-  border-bottom: 2px solid inherit;
-  transition: background-color 0.4s;
+  transition: background-color 0.3s;
 }
 
 .nav-item:hover,
 .contact:hover {
   background-color: #ffc401;
-  border-bottom: 2px solid #13171a;
 }
 
-.nav-item:hover,
-.services h1,
-.legend,
-.contact:hover,
 .page-header,
-.page-text {
+.legend,
+.content-header,
+.content-text,
+.nav-item:hover,
+.contact:hover {
   color: #13171a;
 }
 
 .slideshow {
-  background-image: radial-gradient(#fed581, #ffc401);
-  border-bottom: 50px solid #47515a;
+  background-image: radial-gradient(#fed581, #ffc401 85%);
+  border-bottom: 1px solid rgba(71, 81, 90, .10); /* #47515a */
 }
 
 .previous,
@@ -131,8 +131,8 @@ header {
 }
 
 .dot {
-  border: 1px solid rgba(71, 81, 90, 0.25); /* #47515a */
   background-color: rgba(71, 81, 90, 0.15); /* #47515a */
+  border: 1px solid rgba(71, 81, 90, 0.25); /* #47515a */
   transition: background-color 0.3s;
 }
 
@@ -141,25 +141,24 @@ header {
   background-color: rgba(71, 81, 90, 1); /* #47515a */
 }
 
-.section p:not(.footer-logo),
+.map p:not(.logo),
 .contact,
 .credits:hover  {
   color: white;
 }
 
-.services h1,
 .page-header {
   border-bottom: 3px solid #fed581;
 }
 
 .service,
-.small-icon,
-.service-desc {
+.credits-icon,
+.description {
   background-color: white;
   border: 1px solid rgba(71, 81, 90, 0.15); /* #47515a */
 }
 
-.img-stage {
+.icon-stage {
   background-color: #fed581;
 }
 
@@ -200,9 +199,8 @@ header {
 .photo,
 .next,
 .service,
-.section,
 .contact,
-.service-desc {
+.description {
   display: inline-block;
 }
 
@@ -211,13 +209,14 @@ header {
 }
 
 header,
+.nav-item,
 .slideshow,
 .services {
   text-align: center;
 }
 
 .quote,
-.services h1,
+.page-header,
 .legend {
   text-align: left;
 }
@@ -275,7 +274,7 @@ body {
   vertical-align: middle;
 }
 
-.logo {
+header .logo {
   margin: 5px 75px 0 75px;
 }
 
@@ -283,7 +282,7 @@ body {
   height: 90px;
   margin: 0 10px;
   padding: 35px 0 0 0;
-  width: 85px;
+  width: 105px;
 }
 
 a {
@@ -297,16 +296,19 @@ a {
 .previous,
 .next {
   height: 50px;
-  outline: none;
-  transition: transform 0.4s;
+  transition: transform 0.3s;
     backface-visibility: hidden;
   width: 50px;
+}
+
+button {
+  outline: none;
 }
 
 .previous:hover,
 .next:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
 
 .slide {
@@ -334,7 +336,7 @@ a {
 .photo,
 .service,
 .contact,
-.service-desc {
+.description {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -358,7 +360,6 @@ a {
   -webkit-border-radius: 50%;
   height: 13px;
   margin: 0 1px;
-  outline: none;
   width: 13px;
 }
 
@@ -371,17 +372,21 @@ a {
 }
 
 .services {
-  margin: 0 auto;
+  margin: 25px auto 10px auto;
   width: 900px;
 }
 
-.services h1  {
+.page-header  {
   margin: 15px 0;
   padding: 0 0 10px 0;
 }
 
+.content-text {
+  margin: 20px 0;
+}
+
 .service,
-.service-desc {
+.description {
   height: 245px;
   margin: 5px;
 }
@@ -390,7 +395,7 @@ a {
   width: 280px;
 }
 
-.img-stage {
+.icon-stage {
   border-top-left-radius: 3px;
   -moz-border-top-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -413,8 +418,6 @@ a {
 }
 
 .legend {
-  height: 45px;
-  line-height: 2.1em;
   padding-left: 10px;
 }
 
@@ -422,7 +425,7 @@ a {
   padding: 25px 0;
 }
 
-.footer-logo {
+footer .logo {
   margin-bottom: 20px;
 }
 
@@ -440,20 +443,11 @@ a {
   text-decoration: underline;
 }
 
-.page-header {
-  margin: 25px 0;
-  padding-bottom: 10px;
-}
-
-.page-text {
-  margin: 20px 0;
-}
-
 .icons {
   margin-top: 30px; 
 }
 
-.small-icon {
+.credits-icon {
   height: 84px;
   margin-right: 20px;
   padding: 10px;
@@ -475,8 +469,8 @@ a {
   margin-bottom: 5px;
 }
 
-.service-desc {
-  padding: 10px;
+.description {
+  padding: 15px;
   position: relative;
   vertical-align: top;
   width: 630px;
@@ -484,8 +478,12 @@ a {
 
 .more {
   position: absolute;
-    bottom: 20px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
+}
+
+.content-img {
+  height: 256px;
 }
 
 ul {
