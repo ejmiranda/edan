@@ -122,7 +122,7 @@ h1 {
 
 .testimonial-quote blockquote {
     font-family: 'Oswald-Regular';
-    font-size: 1.25em;
+    font-size: 1.35em;
     text-shadow: none;
 }
 
@@ -137,10 +137,11 @@ h1 {
 
 .testimonial-quote cite {
     color: #13171a;
-    line-height: 1.1em;
+    line-height: 1.4em;
 }
   
 .testimonial-quote cite span {
     color: #13171a;
+    font-size: 1.2em;
     text-shadow: none;
 }
