@@ -16,7 +16,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
 }
 
 .logo {
@@ -25,9 +24,11 @@ body {
 
 .nav-item,
 .page-header,
+.legend,
+.content-header,
 .contact {
   font-family: 'Oswald-Regular';
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 /***************************************/
@@ -56,14 +57,14 @@ body {
   font-size: 1.5em;
 }
 
-.content-text {
-  font-size: 1.15em;
+.content-text,
+.description {
+  font-size: 1em;
   line-height: 1.5em;
 }
 
 .legend {
-  font-size: 1.2em;
-  line-height: 2.15em;
+  font-size: 1.1em;
 }
 
 footer .logo {
@@ -79,9 +80,14 @@ footer .logo {
   font-size: 0.9em;
 }
 
-.description {
-  font-size: 1.1em;
-  line-height: 1.4em;
+/******************/
+/* Text Transform */
+/******************/
+
+.page-header,
+.legend,
+.content-header {
+  text-transform: uppercase;
 }
 
 /**********************************************/
@@ -120,7 +126,7 @@ header {
 }
 
 .slideshow {
-  background-image: radial-gradient(#fed581, #ffc401 85%);
+  background-image: radial-gradient(#fee181, #ffc401 85%);
   border-bottom: 1px solid rgba(71, 81, 90, .10); /* #47515a */
 }
 
@@ -148,7 +154,7 @@ header {
 }
 
 .page-header {
-  border-bottom: 3px solid #fed581;
+  border-bottom: 3px solid #fee181;
 }
 
 .service,
@@ -159,7 +165,7 @@ header {
 }
 
 .icon-stage {
-  background-color: #fed581;
+  background-color: #fee181;
 }
 
 .map {
@@ -171,7 +177,7 @@ header {
 }
 
 .contact:hover {
-  border-color: #ffb501;
+  border-color: #ffc401;
 }
 
 .copyright,
@@ -211,7 +217,8 @@ header {
 header,
 .nav-item,
 .slideshow,
-.services {
+.services,
+.exit {
   text-align: center;
 }
 
@@ -382,7 +389,7 @@ button {
 }
 
 .content-text {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .service,
@@ -392,6 +399,7 @@ button {
 }
 
 .service {
+  position: relative;
   width: 280px;
 }
 
@@ -419,6 +427,8 @@ button {
 
 .legend {
   padding-left: 10px;
+  position: absolute;
+    bottom: 13px;
 }
 
 .map {
@@ -480,13 +490,4 @@ footer .logo {
   position: absolute;
     bottom: 15px;
     right: 15px;
-}
-
-.content-img {
-  height: 256px;
-}
-
-ul {
-  list-style-position: inside;
-  list-style-type: square;
 }
