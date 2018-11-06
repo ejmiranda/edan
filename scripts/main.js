@@ -1,10 +1,19 @@
 const slides = document.querySelectorAll(`.slide`);
+const dots = document.querySelectorAll(`.dot`);
 const prevBtn = document.querySelector(`.previous`);
 const nextBtn = document.querySelector(`.next`);
-const dots = document.querySelectorAll(`.dot`);
 
 let index = 0;
 let isAfterLoad = true;
+
+if (dots) {
+  for (let [dotIndex, dot] of dots.entries()) {
+    dot.addEventListener(`click`, () => {
+      index = dotIndex;
+      showSlide(index);
+    });
+  }
+}
 
 if (prevBtn) {
   prevBtn.addEventListener(`click`, () => {
@@ -15,18 +24,21 @@ if (prevBtn) {
 
 if (nextBtn) {
   nextBtn.addEventListener(`click`, () => {
-    index = (index < 3) ? ++index : 0;
+    setNextSlideIndex();
     showSlide(index);
   });
 }
 
-if (dots) {
-  for (let [dotIndex, dot] of dots.entries()) {
-    dot.addEventListener(`click`, () => {
-      index = dotIndex;
-      showSlide(index);
-    });
-  }
+function showSlideAuto() {
+  window.setTimeout(() => {
+    setNextSlideIndex();
+    showSlide(index);
+    showSlideAuto();
+  }, 10000); 
+}
+
+function setNextSlideIndex() {
+  index = (index < 3) ? ++index : 0;
 }
 
 function showSlide(index) {
@@ -40,9 +52,10 @@ function showSlide(index) {
   dots[index].classList.add(`selected`);
 }
 
-updateCopyrightYear();
-
 function updateCopyrightYear() {
   const year = document.querySelector(`.year`);
   year.textContent = new Date().getFullYear();
 }
+
+showSlideAuto();
+updateCopyrightYear();

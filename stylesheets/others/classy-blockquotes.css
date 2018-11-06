@@ -117,7 +117,7 @@ h1 {
 @font-face {
   font-display: block;
   font-family: 'Oswald-Regular';
-  src: url(fonts/Oswald-Regular.ttf);
+  src: url(../fonts/Oswald-Regular.ttf);
 }
 
 .testimonial-quote blockquote {
