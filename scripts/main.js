@@ -15,6 +15,15 @@ window.addEventListener(`scroll`, () => {
   makeStickyHeader();
 });
 
+if (topBtn) {
+  topBtn.addEventListener(`click`, () => {
+    window.scrollTo ({
+      top: 0,
+      behavior: `smooth`
+    });
+  });
+}
+
 if (dots) {
   for (let [dotIndex, dot] of dots.entries()) {
     dot.addEventListener(`click`, () => {
@@ -35,15 +44,6 @@ if (nextBtn) {
   nextBtn.addEventListener(`click`, () => {
     setNextSlideIndex();
     showSlide(index);
-  });
-}
-
-if (topBtn) {
-  topBtn.addEventListener(`click`, () => {
-    window.scrollTo ({
-      top: 0,
-      behavior: `smooth`
-    });
   });
 }
 
