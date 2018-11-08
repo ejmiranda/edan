@@ -279,6 +279,13 @@ body {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+    top: 0;
+  z-index: 1000;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 10px;
