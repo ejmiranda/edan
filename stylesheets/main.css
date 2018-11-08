@@ -88,6 +88,10 @@ footer .logo {
   font-size: 1.3em;
 }
 
+.top {
+  font-size: 1.5em;
+}
+
 /******************/
 /* Text Transform */
 /******************/
@@ -106,21 +110,25 @@ body {
   background-color: whitesmoke;
 }
 
-header {
+header,
+.top {
   background-color: #47515a;
 }
 
 .logo,
-.nav-item {
+.nav-item,
+.top {
   color: #ffc401;
 }
 
-.nav-item {
+.nav-item,
+.top {
   transition: background-color 0.3s;
 }
 
 .nav-item:hover,
-.contact:hover {
+.contact:hover,
+.top:hover {
   background-color: #ffc401;
 }
 
@@ -129,7 +137,8 @@ header {
 .content-header,
 .content-text,
 .nav-item:hover,
-.contact:hover {
+.contact:hover,
+.top:hover {
   color: #13171a;
 }
 
@@ -360,6 +369,7 @@ button {
   width: 365px;
 }
 
+.top,
 .photo,
 .service,
 .contact,
@@ -394,6 +404,7 @@ button {
   width: 13px;
 }
 
+.top:hover,
 .dot:hover {
   cursor: pointer;
 }
@@ -541,4 +552,22 @@ footer .logo {
 
 .brief {
   margin: 15px 0;
+}
+
+.top {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+    bottom: 25px;
+    right: 25px;
+  transform: rotate(90deg);
+  transition: opacity 0.2s;
+  width: 40px;
+  z-index: 2000;
+}
+
+.shown {
+  height: 40px;
+  opacity: 1;
 }
