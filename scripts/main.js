@@ -24,7 +24,7 @@ if (topBtn) {
   });
 }
 
-if (dots) {
+if (dots[0]) {
   for (let [dotIndex, dot] of dots.entries()) {
     dot.addEventListener(`click`, () => {
       index = dotIndex;
@@ -72,7 +72,7 @@ function setNextSlideIndex() {
   index = (index < 3) ? ++index : 0;
 }
 
-if (slides) {
+if (slides[0]) {
   showSlideAuto();
 }
 

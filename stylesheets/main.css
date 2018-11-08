@@ -503,7 +503,7 @@ footer .logo {
   width: 84px;
 }
 
-.attributions {
+.attribution {
   margin: 10px 0;
 }
 
@@ -570,4 +570,9 @@ footer .logo {
 .shown {
   height: 40px;
   opacity: 1;
+}
+
+.contact-icon {
+  width: 75px;
+  height: 75px;
 }
