@@ -146,6 +146,20 @@ header,
   background-color: rgba(71, 81, 90, 1); /* #47515a */
 }
 
+.separator {
+  background-color: #ffc401;
+  height: 3px;
+  width: 100%;
+}
+
+header .separator {
+  border-bottom: 1px solid rgba(71, 81, 90, .10); /* #47515a */
+}
+
+footer .separator {
+  border-top: 1px solid rgba(71, 81, 90, .10); /* #47515a */
+}
+
 .map p,
 .contact,
 .credits:hover  {
