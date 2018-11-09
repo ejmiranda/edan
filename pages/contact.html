@@ -48,10 +48,32 @@
       <div class="content">
         <div class="container">
           <h1 class="page-header">Contacto</h1>
+          <p class="content-text">Por favor comunícate con nosotros para cualquier consulta:</p>
+          <div class="whatsapp">
             <img 
                 class="contact-icon"
                 src="../media/whatsapp.svg" 
                 alt="WhatsApp Icon">
+            <p class="phone">+507 6999-9999</p>
+          </div>
+          <div class="separator"></div>
+          <div class="email">
+            <img 
+                class="contact-icon"
+                src="../media/email.svg" 
+                alt="WhatsApp Icon">
+            <form action="#">
+              <label for="name">Nombre (Requerido)</label>
+              <input type="text" name="name" id="name">
+              <label for="email">Correo (Requerido)</label>
+              <input type="email" name="email" id="email">
+              <label for="subject">Asunto</label>
+              <input type="text" name="subject" id="subject">
+              <label for="msg">Mensaje</label>
+              <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+              <input type="submit" value="ENVIAR">
+            </form>
+          </div>
         </div>  
       </div>
       <footer class="bottom">
