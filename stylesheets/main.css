@@ -83,6 +83,10 @@ input[type=submit] {
   font-size: 1.3em;
 }
 
+form p {
+  font-size: 14px;
+}
+
 /******************/
 /* Text Transform */
 /******************/
@@ -232,6 +236,10 @@ input:focus,
 textarea:focus {
   border: 1px solid #ffc401;
   box-shadow: 0 0 5px #ffc401;
+}
+
+.near-max {
+  color: red;
 }
 
 /************************/
@@ -641,19 +649,23 @@ form {
 
 input,
 textarea {
-  margin: 5px 0 20px 0;
   padding: 10px;
 }
 
 input[type=text],
 input[type=email] {
+  margin: 5px 0 20px 0;
   width: 300px;
 }
 
 textarea {
+  height: 200px;
+  margin: 5px 0;
+  resize: none;
   width: 600px;
 }
 
 input[type=submit] {
+  margin: 20px 0;
   width: 100px;
 }

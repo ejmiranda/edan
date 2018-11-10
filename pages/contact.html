@@ -64,13 +64,28 @@
                 alt="WhatsApp Icon">
             <form action="#">
               <label for="name">Nombre (Requerido)</label>
-              <input type="text" name="name" id="name">
+              <input 
+                  type="text" 
+                  name="name" 
+                  id="name">
               <label for="email">Correo (Requerido)</label>
-              <input type="email" name="email" id="email">
+              <input 
+                  type="email" 
+                  name="email" 
+                  id="email">
               <label for="subject">Asunto</label>
-              <input type="text" name="subject" id="subject">
+              <input 
+                  type="text" 
+                  name="subject" 
+                  id="subject">
               <label for="msg">Mensaje</label>
-              <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+              <textarea 
+                  name="msg" 
+                  id="msg"
+                  maxlength="810"></textarea>
+              <p class="limit">
+                <span class="chars">0</span> de <span class="max"></span>
+              </p>
               <input type="submit" value="ENVIAR">
             </form>
           </div>
