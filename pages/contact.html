@@ -62,7 +62,10 @@
                 class="contact-icon"
                 src="../media/email.svg" 
                 alt="WhatsApp Icon">
-            <form action="#">
+            <form 
+                action="https://formspree.io/info@grupoedan.com"
+                method="POST"
+                id="contact-form">
               <label for="name">Nombre (Requerido)</label>
               <input 
                   type="text" 
@@ -71,22 +74,18 @@
               <label for="email">Correo (Requerido)</label>
               <input 
                   type="email" 
-                  name="email" 
+                  name="email"
                   id="email">
-              <label for="subject">Asunto</label>
-              <input 
-                  type="text" 
-                  name="subject" 
-                  id="subject">
               <label for="msg">Mensaje</label>
               <textarea 
                   name="msg" 
                   id="msg"
+                  form="contact-form"
                   maxlength="810"></textarea>
               <p class="limit">
                 <span class="chars">0</span> de <span class="max"></span>
               </p>
-              <input type="submit" value="ENVIAR">
+              <button type="submit">ENVIAR</button>
             </form>
           </div>
         </div>  
