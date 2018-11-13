@@ -16,17 +16,11 @@ let index = 0;
 let isAfterLoad = true;
 
 window.addEventListener(`scroll`, () => {
-  console.log(window.pageYOffset);
-  makeStickyHeader();
+  setScrolledLayout();
 });
 
 if (topBtn) {
-  topBtn.addEventListener(`click`, () => {
-    window.scrollTo ({
-      top: 0,
-      behavior: `smooth`
-    });
-  });
+  topBtn.addEventListener(`click`, backToTop);
 }
 
 if (dots[0]) {
@@ -59,7 +53,7 @@ if (chars) {
   });
 }
 
-function makeStickyHeader() {
+function setScrolledLayout() {
   if (window.pageYOffset > 0) {
     header.classList.add(`sticky`);
     if (window.pageYOffset > 100) {
@@ -71,6 +65,14 @@ function makeStickyHeader() {
   else {
     header.classList.remove(`sticky`);
   }
+}
+
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 10);
+  }
+  topBtn.classList.remove(`shown`);
 }
 
 function showSlide(index) {
