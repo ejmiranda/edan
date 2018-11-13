@@ -70,3 +70,7 @@ button {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
+input[type="submit"] {
+	-webkit-appearance: none;
+}
