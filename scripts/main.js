@@ -51,17 +51,27 @@ if (chars) {
   });
 }
 
+/* https://codepen.io/alexandr-kazakov/pen/yMRPOR?editors=0010 
+   Original by Alexandr Kazakov
+   Modified by Edgar Miranda
+*/
+
 function trackScroll() {
   let currentY = window.pageYOffset;
-  let scrollTreshold = 200;
+  let scrollThreshold = 200;
 
-    if (currentY > scrollTreshold) {
+    if (currentY > scrollThreshold) {
       topBtn.classList.add('show');
     }
-    if (currentY < scrollTreshold) {
+    if (currentY < scrollThreshold) {
       topBtn.classList.remove('show');
     }
 }
+
+/* https://codepen.io/alexandr-kazakov/pen/yMRPOR?editors=0010 
+   Original by Alexandr Kazakov
+   Modified by Edgar Miranda
+*/
 
 function backToTop() {
   if (window.pageYOffset > 0) {
