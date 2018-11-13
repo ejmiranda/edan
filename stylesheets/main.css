@@ -325,7 +325,7 @@ body {
   position: relative;
 }
 
-.sticky {
+header {
   position: sticky;
   position: -webkit-sticky;
     top: 0;
@@ -618,7 +618,7 @@ input[type=submit] {
   z-index: 2000;
 }
 
-.shown {
+.show {
   height: 40px;
   opacity: 1;
 }

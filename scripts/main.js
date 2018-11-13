@@ -15,9 +15,7 @@ const max = document.querySelector(`.max`);
 let index = 0;
 let isAfterLoad = true;
 
-window.addEventListener(`scroll`, () => {
-  setScrolledLayout();
-});
+window.addEventListener(`scroll`, trackScroll);
 
 if (topBtn) {
   topBtn.addEventListener(`click`, backToTop);
@@ -53,18 +51,16 @@ if (chars) {
   });
 }
 
-function setScrolledLayout() {
-  if (window.pageYOffset > 0) {
-    header.classList.add(`sticky`);
-    if (window.pageYOffset > 100) {
-      topBtn.classList.add(`shown`);
-    } else {
-      topBtn.classList.remove(`shown`);
+function trackScroll() {
+  let currentY = window.pageYOffset;
+  let scrollTreshold = 200;
+
+    if (currentY > scrollTreshold) {
+      topBtn.classList.add('show');
     }
-  } 
-  else {
-    header.classList.remove(`sticky`);
-  }
+    if (currentY < scrollTreshold) {
+      topBtn.classList.remove('show');
+    }
 }
 
 function backToTop() {
@@ -72,7 +68,6 @@ function backToTop() {
     window.scrollBy(0, -80);
     setTimeout(backToTop, 10);
   }
-  topBtn.classList.remove(`shown`);
 }
 
 function showSlide(index) {
