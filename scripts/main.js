@@ -1,16 +1,16 @@
 const topBtn = document.querySelector(`.top`);
-const header = document.querySelector(`header`);
-const navi = document.querySelectorAll(`.nav-item`);
-const logo = document.querySelector(`.logo`);
 const slides = document.querySelectorAll(`.slide`);
 const dots = document.querySelectorAll(`.dot`);
 const prevBtn = document.querySelector(`.previous`);
 const nextBtn = document.querySelector(`.next`);
-const year = document.querySelector(`.year`);
+const form = document.querySelector(`form`);
+const name = document.querySelector(`#name`);
+const email = document.querySelector(`#email`);
 const textArea = document.querySelector(`textarea`);
 const limit = document.querySelector(`.limit`);
 const chars = document.querySelector(`.chars`);
 const max = document.querySelector(`.max`);
+const year = document.querySelector(`.year`);
 
 let index = 0;
 let isAfterLoad = true;
@@ -19,15 +19,6 @@ window.addEventListener(`scroll`, trackScroll);
 
 if (topBtn) {
   topBtn.addEventListener(`click`, backToTop);
-}
-
-if (dots[0]) {
-  for (let [dotIndex, dot] of dots.entries()) {
-    dot.addEventListener(`click`, () => {
-      index = dotIndex;
-      showSlide(index);
-    });
-  }
 }
 
 if (prevBtn) {
@@ -44,11 +35,65 @@ if (nextBtn) {
   });
 }
 
-if (chars) {
+if (dots[0]) {
+  for (let [dotIndex, dot] of dots.entries()) {
+    dot.addEventListener(`click`, () => {
+      index = dotIndex;
+      showSlide(index);
+    });
+  }
+}
+
+if (form) {
+  name.addEventListener(`input`, () => {
+    setErrorState(
+        name.nextElementSibling, 
+        false,
+        ``);
+  });
+  email.addEventListener(`input`, () => {
+    setErrorState(
+        email.nextElementSibling, 
+        false,
+        ``);
+  });
+  form.addEventListener(`submit`, (event) => {
+    if (email.validity.valueMissing) {
+      setErrorState(
+          email.nextElementSibling, 
+          true,
+          `Por favor llena este campo`);
+      event.preventDefault();
+    }
+    if (email.validity.typeMismatch) {
+      setErrorState(
+          email.nextElementSibling, 
+          true,
+          `Por favor introduce una dirección de correo válida`);
+      event.preventDefault();
+    }
+    if (name.validity.valueMissing) {
+      setErrorState(
+          name.nextElementSibling, 
+          true,
+          `Por favor llena este campo`);
+      event.preventDefault();
+    }
+  });
   showChars();
   textArea.addEventListener(`input`, () => {
     showChars();
   });
+}
+
+function setErrorState(label, isError, msg) {
+  label.previousElementSibling.focus();
+  label.textContent = msg;
+  if (isError) {
+    label.classList.add(`error`);
+  } else {
+    label.classList.remove(`error`);
+  }
 }
 
 /* https://codepen.io/alexandr-kazakov/pen/yMRPOR?editors=0010 

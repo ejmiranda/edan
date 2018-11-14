@@ -66,26 +66,37 @@
                 id="contact-form"
                 action="https://formcarry.com/s/0KL6OYeiAQN"
                 method="POST"
-                accept-charset="UTF-8">
+                accept-charset="UTF-8"
+                novalidate
+                autocomplete="off">
               <input 
                   class="hidden"
                   type="text" 
                   name="_gotcha">
-              <label for="name">Nombre 
+              <label class="field" for="name">Nombre 
                 <span class="required">(Requerido)</span>
               </label>
               <input
                   id="name"
                   type="text" 
-                  name="name">
-              <label for="email">Correo 
+                  name="name"
+                  required>
+              <label></label>
+              <label class="field" for="email">Correo 
                 <span class="required">(Requerido)</span>
               </label>
               <input
                   id="email"
                   type="email" 
-                  name="email">
-              <label for="msg">Mensaje</label>
+                  name="email"
+                  required>
+              <label></label>
+              <label class="field" for="phone">Teléfono</label>
+              <input
+                  id="phone"
+                  type="text" 
+                  name="phone">
+              <label class="field" for="msg">Mensaje</label>
               <textarea 
                   id="msg"
                   form="contact-form"
