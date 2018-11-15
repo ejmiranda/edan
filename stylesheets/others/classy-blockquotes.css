@@ -133,6 +133,7 @@ h1 {
 
 .testimonial-quote blockquote p:first-child:before {
     color: gray;
+    width: 100px;
 }
 
 .testimonial-quote cite {
