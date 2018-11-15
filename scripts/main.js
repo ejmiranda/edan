@@ -1,8 +1,8 @@
 const topBtn = document.querySelector(`.top`);
 const slides = document.querySelectorAll(`.slide`);
-const dots = document.querySelectorAll(`.dot`);
 const prevBtn = document.querySelector(`.previous`);
 const nextBtn = document.querySelector(`.next`);
+const dots = document.querySelectorAll(`.dot`);
 const form = document.querySelector(`form`);
 const name = document.querySelector(`#name`);
 const email = document.querySelector(`#email`);
@@ -16,85 +16,7 @@ let index = 0;
 let isAfterLoad = true;
 
 window.addEventListener(`scroll`, trackScroll);
-
-if (topBtn) {
-  topBtn.addEventListener(`click`, backToTop);
-}
-
-if (prevBtn) {
-  prevBtn.addEventListener(`click`, () => {
-    index = (index > 0) ? --index : slides.length - 1;
-    showSlide(index);
-  });
-}
-
-if (nextBtn) {
-  nextBtn.addEventListener(`click`, () => {
-    setNextSlideIndex();
-    showSlide(index);
-  });
-}
-
-if (dots[0]) {
-  for (let [dotIndex, dot] of dots.entries()) {
-    dot.addEventListener(`click`, () => {
-      index = dotIndex;
-      showSlide(index);
-    });
-  }
-}
-
-if (form) {
-  name.addEventListener(`input`, () => {
-    setErrorState(
-        name.nextElementSibling, 
-        false,
-        ``);
-  });
-  email.addEventListener(`input`, () => {
-    setErrorState(
-        email.nextElementSibling, 
-        false,
-        ``);
-  });
-  form.addEventListener(`submit`, (event) => {
-    if (email.validity.valueMissing) {
-      setErrorState(
-          email.nextElementSibling, 
-          true,
-          `Por favor llena este campo`);
-      event.preventDefault();
-    }
-    if (email.validity.typeMismatch) {
-      setErrorState(
-          email.nextElementSibling, 
-          true,
-          `Por favor introduce una dirección de correo válida`);
-      event.preventDefault();
-    }
-    if (name.validity.valueMissing) {
-      setErrorState(
-          name.nextElementSibling, 
-          true,
-          `Por favor llena este campo`);
-      event.preventDefault();
-    }
-  });
-  showChars();
-  textArea.addEventListener(`input`, () => {
-    showChars();
-  });
-}
-
-function setErrorState(label, isError, msg) {
-  label.previousElementSibling.focus();
-  label.textContent = msg;
-  if (isError) {
-    label.classList.add(`error`);
-  } else {
-    label.classList.remove(`error`);
-  }
-}
+topBtn.addEventListener(`click`, backToTop);
 
 /* https://codepen.io/alexandr-kazakov/pen/yMRPOR?editors=0010 
    Original by Alexandr Kazakov
@@ -125,6 +47,41 @@ function backToTop() {
   }
 }
 
+if (slides[0]) {
+  
+  showSlideAuto();
+
+  prevBtn.addEventListener(`click`, () => {
+    index = (index > 0) ? --index : slides.length - 1;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener(`click`, () => {
+    setNextSlideIndex();
+    showSlide(index);
+  });
+
+  for (let [dotIndex, dot] of dots.entries()) {
+    dot.addEventListener(`click`, () => {
+      index = dotIndex;
+      showSlide(index);
+    });
+  }
+
+}
+
+function showSlideAuto() {
+  window.setTimeout(() => {
+    setNextSlideIndex();
+    showSlide(index);
+    showSlideAuto();
+  }, 10000); 
+}
+
+function setNextSlideIndex() {
+  index = (index < 3) ? ++index : 0;
+}
+
 function showSlide(index) {
   if (isAfterLoad && index !== 0) {
     slides[0].classList.add(`fading`);
@@ -136,20 +93,61 @@ function showSlide(index) {
   dots[index].classList.add(`selected`);
 }
 
-function setNextSlideIndex() {
-  index = (index < 3) ? ++index : 0;
+if (form) {
+  
+  name.addEventListener(`input`, () => {
+    setErrorState(
+        name.nextElementSibling, 
+        false,
+        ``);
+  });
+
+  email.addEventListener(`input`, () => {
+    setErrorState(
+        email.nextElementSibling, 
+        false,
+        ``);
+  });
+
+  form.addEventListener(`submit`, (event) => {
+    if (email.validity.valueMissing) {
+      setErrorState(
+          email.nextElementSibling, 
+          true,
+          `Por favor llena este campo`);
+      event.preventDefault();
+    }
+    if (email.validity.typeMismatch) {
+      setErrorState(
+          email.nextElementSibling, 
+          true,
+          `Por favor introduce una dirección de correo válida`);
+      event.preventDefault();
+    }
+    if (name.validity.valueMissing) {
+      setErrorState(
+          name.nextElementSibling, 
+          true,
+          `Por favor llena este campo`);
+      event.preventDefault();
+    }
+  });
+
+  showChars();
+  textArea.addEventListener(`input`, () => {
+    showChars();
+  });
+
 }
 
-if (slides[0]) {
-  showSlideAuto();
-}
-
-function showSlideAuto() {
-  window.setTimeout(() => {
-    setNextSlideIndex();
-    showSlide(index);
-    showSlideAuto();
-  }, 10000); 
+function setErrorState(label, isError, msg) {
+  label.previousElementSibling.focus();
+  label.textContent = msg;
+  if (isError) {
+    label.classList.add(`error`);
+  } else {
+    label.classList.remove(`error`);
+  }
 }
 
 function showChars() {
