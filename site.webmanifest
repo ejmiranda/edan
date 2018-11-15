@@ -1,0 +1,19 @@
+{
+    "name": "Grupo EDAN",
+    "short_name": "Grupo EDAN",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#47515a",
+    "background_color": "#47515a",
+    "display": "standalone"
+}
