@@ -317,6 +317,44 @@ header,
   -moz-animation: fading 1.5s 1;
 }
 
+/***********************************/
+/* Opacity & Transform Transitions */
+/***********************************/
+
+.previous,
+.next,
+.dot {
+  opacity: 0;
+}
+
+.previous,
+.next {
+  transition: opacity 0.5s, transform 0.3s;
+    backface-visibility: hidden;
+}
+
+.dot {
+  transition: opacity 0.5s;
+}
+
+.previous:hover,
+.next:hover {
+  transform: scale(1.4);
+}
+
+.visible {
+  opacity: 1;
+}
+
+.top {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show {
+  opacity: 1;
+}
+
 /**********/
 /* Others */
 /**********/
@@ -365,27 +403,13 @@ a {
 }
 
 .slideshow {
-  padding: 10px 0 20px 0;
-}
-
-.previous,
-.next {
-  height: 50px;
-  transition: transform 0.3s;
-    backface-visibility: hidden;
-  width: 50px;
+  padding: 10px 0 10px 0;
 }
 
 button,
 input,
 textarea {
   outline: none;
-}
-
-.previous:hover,
-.next:hover {
-  cursor: pointer;
-  transform: scale(1.4);
 }
 
 .slide {
@@ -396,6 +420,17 @@ textarea {
 
 .active {
   display: inline-block;
+}
+
+.previous,
+.next {
+  height: 50px;
+  width: 50px;
+}
+
+.previous:hover,
+.next:hover {
+  cursor: pointer;
 }
 
 .quote {
@@ -613,20 +648,17 @@ button[type="submit"] {
 
 .top {
   height: 0;
-  opacity: 0;
   overflow: hidden;
   position: fixed;
     bottom: 25px;
     right: 25px;
   transform: rotate(90deg);
-  transition: opacity 0.5s;
   width: 40px;
   z-index: 2000;
 }
 
 .show {
   height: 40px;
-  opacity: 1;
 }
 
 .whatsapp,

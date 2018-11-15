@@ -1,4 +1,5 @@
 const topBtn = document.querySelector(`.top`);
+const slideShow = document.querySelector(`.slideshow`);
 const slides = document.querySelectorAll(`.slide`);
 const prevBtn = document.querySelector(`.previous`);
 const nextBtn = document.querySelector(`.next`);
@@ -47,7 +48,7 @@ function backToTop() {
   }
 }
 
-if (slides[0]) {
+if (slideShow) {
   
   showSlideAuto();
 
@@ -67,6 +68,18 @@ if (slides[0]) {
       showSlide(index);
     });
   }
+
+  slideShow.addEventListener(`mouseover`, () => {
+    prevBtn.classList.add(`visible`);
+    nextBtn.classList.add(`visible`);
+    dots.forEach((dot) => dot.classList.add(`visible`));
+  });
+
+  slideShow.addEventListener(`mouseout`, () => {
+    prevBtn.classList.remove(`visible`);
+    nextBtn.classList.remove(`visible`);
+    dots.forEach((dot) => dot.classList.remove(`visible`));
+  });
 
 }
 
