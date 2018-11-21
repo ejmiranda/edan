@@ -87,6 +87,10 @@ form p {
   font-size: 14px;
 }
 
+.name {
+  font-size: 1.3em;
+}
+
 /******************/
 /* Text Transform */
 /******************/
@@ -624,12 +628,11 @@ button[type="submit"] {
 }
 
 .project {
-  padding: 15px 0;
-  margin: 20px 0;
+  margin: 0 0 35px 0;
 }
 
 .project-info {
-  padding: 0 10px;
+  padding: 10px;
   width: 520px;
 }
 
@@ -643,6 +646,10 @@ button[type="submit"] {
 }
 
 .brief {
+  margin: 50px 0 0 0;
+}
+
+.brief p {
   margin: 15px 0;
 }
 
