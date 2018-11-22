@@ -491,7 +491,8 @@ button[type="submit"] {
 
 .top:hover,
 .dot:hover,
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.phone:hover {
   cursor: pointer;
 }
 
@@ -584,7 +585,8 @@ button[type="submit"] {
 }
 
 .credits:hover,
-.more:hover {
+.more:hover,
+.phone:hover {
   text-decoration: underline;
 }
 
